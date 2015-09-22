@@ -1,0 +1,89 @@
+XML(Extensible Markup Language)
+	XML plays keyrole in Enterprise Messaging
+
+	XML is designed to describe data,not to display data
+	XML tags are predefined.You must define your own tags
+	XML is designed to be self-descriptive.
+
+	Mark-up language means it is full of tags,which we use to tag or mark the data
+	XML is language and platform Independent.
+	It is the universal way of representation
+--------------------
+DTD(Document Type Definition)
+	
+	When application sends data from app1 to app2 
+	DTD defines the structure of and the legal elements and attributes of XML document.
+---------------------
+XML Schema Definition(XSD)
+XSD also used to validate the DATA
+
+Diff B/w XSD and DTD
+
+XSD are more descriptive than DTD
+
+-----------------------
+To handle XML Data in JAVA is done by
+
+What is a parser?
+	Parser converts XML document to XMl Object
+
+JAXP(JAVA API for XML Processing):Supported types are:::
+	1.DOM(Document Object Model) parser 
+	An XMl parser convets an XML document into an XML DOM object-which can then be manipulated with JAVA
+	It provides an API to access the data in DOM
+
+The XML DOM is:
+	A standard object model for XML
+	A standard programming interface for XML
+platform and lang independent
+A W3C Standard
+
+The XML DOM defines the objects and 
+properties of all XML elements and methods(interface) to access them.
+
+Limitation of DOM:
+	DOM is slow because,Dom always creates Document Object Model Tree.
+
+	2.SAX(Simple API for XML) parser
+	SAX parser is an Event Based Parser
+	No additional objects are created here
+	Whenever a parser comes across an element,it will consider as an event.
+
+Advantages of SAX Parser:
+
+	-No DOM  tree is created in SAX parser
+	-SAX parser is fast than DOM parser
+	
+
+W3C means World Wide Web Consortium
+
+JAXB(JAVA API for XML Binding)
+	Is it advanced
+	It will greatly simplyfy processing the XML data.
+	No code will be written ,JAXB will tak care of it.
+	->Unmarshaller
+		XML-->Objects
+	->Marshaller
+		Objects-->XML
+	Advanced API than JAXP	
+
+Generating JAVA classes from .xsd file
+ Right Click .xsd file and goto Generate-->JAXB Classes
+	
+Annotations are used to map with Schema definition in the generated Java Classes
+
+JAXB Objects are created in ObjectFactory.
+
+Why do we need XML in JAVA?
+
+	XML plays keyrole in web services.
+Sharing the data between two languages or frameworks is done by XML
+XML is not Language or platform dependent
+
+XML to interact in heterogeneous applications,we use XML
+	
+
+Difference between xsd and DTD
+
+xsd's are more descriptive 
+	

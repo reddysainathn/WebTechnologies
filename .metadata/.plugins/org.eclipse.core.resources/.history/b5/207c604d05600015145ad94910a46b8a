@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3333/world</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+         <property name="hibernate.show_sql">true</property>
+         <property name="hbm2ddl.auto">create</property>
+         <!-- Read Uncommited---1(For hibernate connection isolation) -->
+         <!-- Read Commited---2(For hibernate connection isolation) -->
+          <!-- Repeateable Read ---4(For hibernate connection isolation) -->
+          <!-- Serializable ---8(For hibernate connection isolation) -->
+         <property name="hibernate.connection.isolation">1</property>
+       <!-- Secondary level cache -->
+          <property name="hibernate.cache.use_second_level_cache">true</property>
+          <property name="hibernate.cache.use_query_cache">true</property>
+          <!-- To configure EHCACHE -->
+          <property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property>
+     <mapping class="com.entity.Product"/>
+     <mapping class="com.entity.City"/> 
+        <mapping class="com.entity.Item"/>
+        <mapping class="com.entity.Bid"/>
+        <mapping class="com.entity.User"/>
+        <mapping class="com.entity.Buyer"/>
+        <mapping class="com.entity.Seller"/>
+        <mapping class="com.entity.Address"/>
+        <mapping class="com.entity.Category"/>
+        <mapping class="com.entity.Supplier"/>
+    </session-factory>
+</hibernate-configuration>

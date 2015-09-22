@@ -1,0 +1,19 @@
+package com.mtc.app.service;
+
+import java.awt.PageAttributes.MediaType;
+
+@Path("/cityService")
+public class CityService {
+
+	private ICityDAO cityDAO;
+
+	public CityService() {
+		productDAO = new ProductDAOHib();
+	}
+
+	@GET
+	@Path("/{id}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public Product fetchProduct(@PathParam("id") int id) {
+		return productDAO.getProductById(id);
+	}

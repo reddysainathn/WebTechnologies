@@ -1,0 +1,11 @@
+Garbage Collector 
+
+	finalize()--
+	
+	
+	
+	Why do we need Servlets when we use JSP if they have same 
+	
+	--ultimately the methods used in jsp are executed in service() of the servlet
+	
+	--No of line generated using JSP in servlet is more,so 
